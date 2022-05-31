@@ -1,0 +1,50 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin box-shadow {
+  box-shadow: 0 8px 16px 0 rgba(1, 1, 1, 0.2);
+}
+
+@mixin logo {
+  font-family: $font_logo-title;
+  text-align: center;
+  position: relative;
+  margin: 10px 0 3px;
+  padding-bottom: 8px;
+}
+
+@mixin button-gradient {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 20px 45px;
+  border-radius: 50px;
+  background-image: linear-gradient(175deg, $color-secondary, $color-primary);
+  border: none;
+  box-shadow: 0 8px 16px 0 rgba(1, 1, 1, 0.2);
+}
+
+@mixin button-new {
+  position: absolute;
+  top: 16px;
+  left: 240px;
+  color: rgb(35, 141, 100);
+  font-weight: 700;
+  background-color: $color-tertiary;
+  width: 90px;
+  height: 28px;
+  border-radius: 2px;
+}

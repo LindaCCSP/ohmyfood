@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+*, ::before, ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  -webkit-box-shadow: 0px 3px 3px 1px #cac9c9;
+          box-shadow: 0px 3px 3px 1px #cac9c9;
+}
+.header__logo {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  position: relative;
+  margin: 10px 0 3px;
+  padding-bottom: 8px;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3Nhc3MvbWFpbi5zY3NzIiwiLi4vLi4vc2Fzcy9iYXNlL190eXBvZ3JhcGh5LnNjc3MiLCIuLi9zdHlsZS5jc3MiLCIuLi8uLi9zYXNzL2xheW91dHMvX2hlYWRlci5zY3NzIiwiLi4vLi4vc2Fzcy91dGlscy9fdmFyaWFibGVzLnNjc3MiLCIuLi8uLi9zYXNzL3V0aWxzL19taXhpbnMuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBUSx3R0FBQTtBQUNBLDhFQUFBO0FDRFI7RUFDRSw4QkFBQTtVQUFBLHNCQUFBO0VBQ0EsU0FBQTtFQUNBLFVBQUE7QUNHRjs7QURBQTtFQUNFLGlDQUFBO0FDR0Y7O0FDVkE7RUFDRSwyQ0NLZTtVRExmLG1DQ0tlO0FGUWpCO0FDWEU7RUVpQkEsaUNEWmdCO0VDYWhCLGtCQUFBO0VBQ0Esa0JBQUE7RUFDQSxrQkFBQTtFQUNBLG1CQUFBO0FISEYiLCJmaWxlIjoic3R5bGUuY3NzIn0= */

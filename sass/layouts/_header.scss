@@ -1,0 +1,7 @@
+.header {
+  box-shadow: $shadow-accueil;
+
+  &__logo {
+    @include logo;
+  }
+}
