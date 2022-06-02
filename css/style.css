@@ -120,6 +120,67 @@ body {
   font-weight: 700;
 }
 
+/* section restaurants*/
+.section-restaurants {
+  background-color: #f4f4f4;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+.section-restaurants__titre {
+  font-size: 1.6rem;
+  font-weight: 800;
+  padding: 50px 15px 20px;
+  margin: 0;
+}
+.section-restaurants a {
+  text-decoration: none;
+  color: inherit;
+}
+.section-restaurants__containerflex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.8rem;
+  margin: 0 15px;
+}
+.section-restaurants__card {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.section-restaurants__card__img {
+  width: 100%;
+  height: 200px;
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+}
+.section-restaurants__card__new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 16px;
+  left: 240px;
+  color: rgb(35, 141, 100);
+  font-weight: 700;
+  background-color: #99E2D0;
+  width: 90px;
+  height: 28px;
+  border-radius: 2px;
+}
+.section-restaurants__card__nom-resto {
+  font-weight: 800;
+  font-size: 1.2rem;
+  line-height: 37px;
+  margin-left: 8px;
+}
+.section-restaurants__card__nom-plat {
+  margin-left: 8px;
+  font-size: 1rem;
+}
+
 .button-explorez {
   display: flex;
   align-items: center;
@@ -142,6 +203,33 @@ body {
 .button-explorez__btn--gradient:hover {
   transform: scale(1.15);
   box-shadow: 0 8px 16px 2px rgba(1, 1, 1, 0.51);
+}
+
+.heart {
+  width: 30px;
+  stroke-width: 30;
+  stroke: black;
+  fill: white;
+  cursor: pointer;
+}
+
+.heart-full {
+  position: absolute;
+  fill: url(#remplissageGradient);
+  stroke: none;
+  left: 280px;
+  top: 230px;
+}
+
+.heart-empty {
+  width: 30px;
+  position: relative;
+  left: 280px;
+  top: -30px;
+}
+.heart-empty:active {
+  opacity: 0;
+  transition: 0.3s;
 }
 
 /*# sourceMappingURL=style.css.map */

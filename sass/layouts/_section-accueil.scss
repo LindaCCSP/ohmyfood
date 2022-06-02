@@ -103,3 +103,61 @@
     font-weight: 700;
   }
 }
+
+/* section restaurants*/
+
+.section-restaurants {
+  background-color: $color-light-grey;
+  margin-top: 50px;
+  padding-bottom: 50px;
+
+  &__titre {
+    font-size: 1.6rem;
+    font-weight: 800;
+    padding: 50px 15px 20px;
+    margin: 0;
+  }
+  & a {
+    text-decoration: none;
+    color: inherit;
+  }
+  &__containerflex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+    margin: 0 15px;
+  }
+
+  &__card {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  &__card__img {
+    width: 100%;
+    height: 200px;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+  }
+
+  &__card__new {
+    @include flex-center;
+    @include button-new;
+  }
+
+  &__card__nom-resto {
+    font-weight: 800;
+    font-size: 1.2rem;
+    line-height: 37px;
+    margin-left: 8px;
+  }
+
+  &__card__nom-plat {
+    margin-left: 8px;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,25 @@
+// Version mobile
+.heart {
+  width: 30px;
+  stroke-width: 30;
+  stroke: black;
+  fill: white;
+  cursor: pointer;
+}
+.heart-full {
+  position: absolute;
+  fill: url(#remplissageGradient);
+  stroke: none;
+   left: 280px; 
+  top: 230px; 
+}
+.heart-empty {
+  width: 30px;
+  position: relative;
+  left: 280px; 
+  top: -30px; 
+  &:active {
+    opacity: 0;
+    transition: 0.3s;
+  }
+}
