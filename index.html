@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>ohmyfood</title>
 </head>
+
 <body>
     <header class="header">
         <h1 class="header__logo">ohmyfood</h1>
@@ -15,24 +17,55 @@
 
     <main>
 
-            <section class="accueil">
-                <div class="localisation">
-                    <form class="localisation__form" action="search.php" method="post">
-                        <i class="fa-solid fa-location-dot localisation__icon"></i>
-                        <input class="localisation__search-input" type="text" name="localisation__search-input"
-                            value="Paris, Belleville">
-                    </form>
+        <!-- section accueil -->
+
+        <section class="accueil">
+            <div class="localisation">
+                <form class="localisation__form" action="search.php" method="post">
+                    <i class="fa-solid fa-location-dot localisation__icon"></i>
+                    <input class="localisation__search-input" type="text" name="localisation__search-input"
+                        value="Paris, Belleville">
+                </form>
+            </div>
+
+            <div class="descriptif">
+                <h2 class="descriptif__title">Réservez le menu qui vous convient</h2>
+                <p class="descriptif__paragraphe">Découvrez des restaurants d'exception, séléctionnés par nos soins.
+                </p>
+                <div class="button-explorez">
+                    <a href="#restaurants" class="button-explorez__btn--gradient">Explorez nos restaurants</a>
                 </div>
-            
-                <div class="descriptif">
-                    <h2 class="descriptif__title">Réservez le menu qui vous convient</h2>
-                    <p class="descriptif__paragraphe">Découvrez des restaurants d'exception, séléctionnés par nos soins.
-                    </p>
-                    <div class="button-explorez">
-                        <a href="#restaurants" class="button-explorez__btn--gradient">Explorez nos restaurants</a>
+            </div>
+        </section>
+
+        <!-- section Fonctionnement -->
+
+        <section class="fonction__container">
+            <div class="fonction">
+                <h2 class="fonction__title">Fonctionnement</h2>
+
+                <div class="fonction-list">
+                    <div class="fonction-list__choice">
+                        <div class="fonction-list__number">1</div>
+                        <div class="fonction-list__icon"><i class="fas fa-mobile-alt"></i></div>
+                        <p class="fonction-list__text">Choisissez un restaurant </p>
+                    </div>
+                    <div class="fonction-list__choice">
+                        <div class="fonction-list__number">2</div>
+                        <div class="fonction-list__icon"><i class="fas fa-list-ul"></i></div>
+                        <p class="fonction-list__text">Composez votre menu</p>
+                    </div>
+                    <div class="fonction-list__choice">
+                        <div class="fonction-list__number">3</div>
+                        <div class="fonction-list__icon"><i class="fas fa-store"></i></div>
+                        <p class="fonction-list__text">Dégustez au restaurant</p>
                     </div>
                 </div>
-            </section>
+
+            </div>
+        </section>
+        
     </main>
 </body>
+
 </html>

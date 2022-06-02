@@ -13,9 +13,6 @@
   align-items: center;
   justify-content: space-between;
 }
-@mixin box-shadow {
-  box-shadow: 0 8px 16px 0 rgba(1, 1, 1, 0.2);
-}
 
 @mixin logo {
   font-family: $font_logo-title;

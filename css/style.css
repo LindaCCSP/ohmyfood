@@ -2,11 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 *, ::before, ::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: "Roboto", sans-serif;
 }
 
@@ -61,6 +61,63 @@ body {
   text-align: center;
   margin: 0 2rem;
   font-weight: 300;
+}
+
+/*section Fonctionnement*/
+.fonction__container {
+  padding: 40px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fonction {
+  width: 95%;
+  max-width: 1200px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.fonction__title {
+  margin: 0;
+  padding-left: 10px;
+}
+
+.fonction-list__choice {
+  display: flex;
+  align-items: center;
+  background: #f4f4f4;
+  height: auto;
+  width: auto;
+  margin: 25px 20px 25px;
+  padding: 5px;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 8px 16px 0 rgba(1, 1, 1, 0.13);
+}
+.fonction-list__choice:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 8px 16px 0 rgba(1, 1, 1, 0.2);
+  background: #f2e7ff;
+}
+.fonction-list__number {
+  background-color: #9356dc;
+  color: white;
+  position: absolute;
+  padding: 3px 8px 3px 8px;
+  border-radius: 500px;
+  transform: translateX(-50%);
+}
+.fonction-list__icon {
+  color: #8d8686;
+  margin: 0 20px 0 30px;
+}
+.fonction-list__text {
+  font-weight: 700;
 }
 
 .button-explorez {
