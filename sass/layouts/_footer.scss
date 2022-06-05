@@ -1,0 +1,39 @@
+
+
+.footer {
+  background-color: $color-dark-grey;
+
+  &__titre {
+    font-family: $font_logo-title;
+    color: #fff;
+    font-weight: 200;
+    margin: 0;
+    padding: 20px 20px 0;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+  }
+
+  p {
+    margin: 0;
+  }
+  li {
+    padding-bottom: 10px;
+  }
+  a {
+    text-decoration: none;
+    list-style: none;
+    color: #fff;
+  }
+
+  &__icon-utensils {
+    padding-right: 10px;
+  }
+  &__icon-hand {
+    font-size: small;
+    padding-right: 8px;
+  }
+}
