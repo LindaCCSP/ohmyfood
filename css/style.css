@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+/*________________ Pages Menus ___________________*/
+@keyframes slideMenu {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideCheck {}
 *, ::before, ::after {
   box-sizing: border-box;
 }
@@ -14,6 +26,29 @@ body {
   box-shadow: 0px 3px 3px 1px #cac9c9;
 }
 .header__logo {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  position: relative;
+  margin: 10px 0 3px;
+  padding-bottom: 8px;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.header-menu__retour {
+  margin-right: 3rem;
+  position: absolute;
+  left: 20px;
+  font-size: 1.6rem;
+}
+.header-menu__retour a {
+  color: black;
+}
+.header-menu__logo {
   font-family: "Shrikhand", cursive;
   text-align: center;
   position: relative;
@@ -215,6 +250,111 @@ body {
   padding-right: 8px;
 }
 
+.photo-menu {
+  width: 100%;
+  height: 55vh;
+  object-fit: cover;
+  position: relative;
+  top: -10px;
+}
+
+.pages-menus {
+  background-color: #f4f4f4;
+  border-radius: 20px 20px 0 0;
+  position: relative;
+  top: -100px;
+}
+
+.menus-en-tete {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menus-en-tete__title {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.6rem;
+}
+
+/*_______ card-menus _____*/
+.container-entrees,
+.container-Plats,
+.container-desserts {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.container-entrees__titre,
+.container-Plats__titre,
+.container-desserts__titre {
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-left: 15px;
+}
+.container-entrees__titre::after,
+.container-Plats__titre::after,
+.container-desserts__titre::after {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 3px;
+  background: #99E2D0;
+}
+.container-entrees__card,
+.container-Plats__card,
+.container-desserts__card {
+  box-shadow: 0 8px 16px 0 rgba(1, 1, 1, 0.2);
+  background-color: #fff;
+  border-radius: 15px;
+  width: 100%;
+  height: 70px;
+  margin: 0;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: 0.5s;
+  animation: slideMenu 3s;
+  /*@keyframes*/
+}
+.container-entrees__card .menu:hover,
+.container-Plats__card .menu:hover,
+.container-desserts__card .menu:hover {
+  transform: scale(1.8);
+}
+.container-entrees__intitule,
+.container-Plats__intitule,
+.container-desserts__intitule {
+  margin: 0;
+  padding: 10px 10px 0;
+  line-height: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.container-entrees__descriptif,
+.container-Plats__descriptif,
+.container-desserts__descriptif {
+  display: flex;
+  width: 100%;
+}
+.container-entrees__accompagnement,
+.container-Plats__accompagnement,
+.container-desserts__accompagnement {
+  margin: 0;
+  padding: 0;
+  padding-left: 10px;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.container-entrees__prix,
+.container-Plats__prix,
+.container-desserts__prix {
+  position: absolute;
+  left: 325px;
+  font-weight: bold;
+}
+
 .button-explorez {
   display: flex;
   align-items: center;
@@ -226,7 +366,7 @@ body {
   color: #fff;
   font-size: 18px;
   cursor: pointer;
-  padding: 20px 45px;
+  padding: 15px 45px;
   border-radius: 50px;
   background-image: linear-gradient(175deg, #FF79DA, #9356DC);
   border: none;
@@ -236,7 +376,31 @@ body {
 }
 .button-explorez__btn--gradient:hover {
   transform: scale(1.15);
-  box-shadow: 0 8px 16px 2px rgba(1, 1, 1, 0.51);
+  box-shadow: 0 8px 16px 2px rgba(1, 1, 1, 0.4);
+}
+
+.button-commander {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+}
+.button-commander__btn--gradient {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 15px 45px;
+  border-radius: 50px;
+  background-image: linear-gradient(175deg, #FF79DA, #9356DC);
+  border: none;
+  box-shadow: 0 8px 16px 0 rgba(1, 1, 1, 0.27);
+  transform: scale(1);
+  transition: transform 0.3s;
+}
+.button-commander__btn--gradient:hover {
+  transform: scale(1.15);
+  box-shadow: 0 8px 16px 2px rgba(1, 1, 1, 0.4);
 }
 
 .heart {
@@ -262,6 +426,30 @@ body {
   top: -30px;
 }
 .heart-empty:active {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+/* coeurs menus */
+.coeurs-menus {
+  position: relative;
+}
+
+.heart-full-menus {
+  position: absolute;
+  fill: url(#remplissageGradient);
+  stroke: none;
+  left: -70px;
+  top: -15px;
+}
+
+.heart-empty-menus {
+  width: 30px;
+  position: absolute;
+  left: -70px;
+  top: -15px;
+}
+.heart-empty-menus:active {
   opacity: 0;
   transition: 0.3s;
 }

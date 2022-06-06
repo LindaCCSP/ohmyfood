@@ -3,6 +3,7 @@
 
 @import "./utils/variables";
 @import "./utils/mixins";
+@import "./utils/keyframes";
 
 
 @import "./base/typography";
@@ -10,6 +11,8 @@
 @import "./layouts/header";
 @import "./layouts/section-accueil";
 @import "./layouts/footer";
+@import "./layouts/menus";
+@import "./layouts/section-menus";
 
 @import "./components/button";
 @import "./components/coeur";

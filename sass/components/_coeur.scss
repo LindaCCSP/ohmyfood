@@ -23,3 +23,26 @@
     transition: 0.3s;
   }
 }
+
+/* coeurs menus */
+
+.coeurs-menus{
+  position: relative;
+}
+.heart-full-menus {
+  position: absolute;
+  fill: url(#remplissageGradient);
+  stroke: none;
+   left: -70px; 
+  top: -15px; 
+}
+.heart-empty-menus {
+  width: 30px;
+  position: absolute;
+  left: -70px; 
+  top: -15px; 
+  &:active {
+    opacity: 0;
+    transition: 0.3s;
+  }
+}

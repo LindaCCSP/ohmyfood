@@ -5,3 +5,24 @@
     @include logo;
   }
 }
+
+// Logog menus
+
+.header-menu {
+  @include flex-center;
+  position: relative;
+
+  &__retour {
+    margin-right: 3rem;
+    position: absolute;
+    left: 20px;
+    font-size: 1.6rem;
+
+    & a {
+      color: black;
+    }
+  }
+  &__logo {
+    @include logo;
+  }
+}
