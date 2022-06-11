@@ -1,12 +1,21 @@
 @keyframes slideMenu{
     from {
-    transform: translateY(200px);
+    transform: translateY(50%);
     opacity: 0;
   }
 
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes scale-up-center {
+  0%{
+    transform: scale(.2);
+  }
+  100%{
+    transform: scale(1);
   }
 }
 

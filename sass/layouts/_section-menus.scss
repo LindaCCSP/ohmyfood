@@ -1,5 +1,71 @@
 /*_______ card-menus _____*/
 
+// .container-entrees,
+// .container-Plats,
+// .container-desserts {
+//   margin: 10px;
+//   @include flex-column;
+
+//   &__titre {
+//     @include titres-menus;
+//   }
+
+//   &__card {
+//     @include card-menus;
+//     transition: 0.5s;
+//     animation: slideMenu 2s; /*@keyframes*/
+
+// .menu:hover {
+//   transform: scale(1.8);
+// }
+// }
+
+// &__intitule {
+//   @include card-menu-titre;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+//   white-space: nowrap;
+// }
+
+// &__descriptif {
+//   border: 1px solid red;
+//   display: flex;
+// width: 100%;
+//   @include flex-column;
+// }
+
+// &__accompagnement {
+//   margin: 0;
+//   padding: 0;
+//   padding-left: 10px;
+//   position: relative;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+//   white-space: nowrap;
+// }
+
+// &__prix {
+//   position: absolute;
+//   left: 325px;
+
+// margin-left: auto;
+// padding-right: 15px;
+
+// font-weight: bold;
+// border: 1px solid red;
+
+//  height: 100%;
+//   }
+// }
+
+// .check{
+//   border: 1px solid red;
+//   background-color: $color-tertiary;
+//   margin-left: 350px;
+// }
+// .fa-circle-check{
+//   // color: $color-tertiary;
+// }
 .container-entrees,
 .container-Plats,
 .container-desserts {
@@ -9,33 +75,49 @@
   &__titre {
     @include titres-menus;
   }
+}
 
-  &__card {
-    @include card-menus;
-    transition: 0.5s;
-    animation: slideMenu 3s; /*@keyframes*/
-    .menu:hover {
-      transform: scale(1.8);
-    }
+.card {
+  // border: 1px solid;
+  display: flex;
+  justify-content: space-between;
+  @include card-menus;
+  animation: slideMenu 2s; /*@keyframes*/
+
+  .menu:hover {
+    transform: scale(1.8);
   }
 
-  &__intitule {
-    @include card-menu-titre;
+  &__menu {
+    // border: 1px solid;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
-  &__descriptif {
-    display: flex;
-    width: 100%;
+  &__titre {
+    // border: 2px solid rgb(204, 17, 48);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 10px 0 10px 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    // overflow-wrap: break-word;
   }
 
-  &__accompagnement {
-    margin: 0;
-    padding: 0;
+  &__descriptif {
+    // border: 1px solid yellow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__compo {
+    // border: 1px solid;
+    margin: 0%;
     padding-left: 10px;
-    position: relative;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -43,8 +125,20 @@
 
   &__prix {
     position: absolute;
-    left: 325px;
-    // transform: translate(-50%, -50%);
+    right: 45px;
     font-weight: bold;
+  }
+
+  &__check {
+    // border: 1px solid;
+    display: flex;
+    align-items: center;
+    background: $color-tertiary;
+    // margin-left: auto;
+    border-radius: 0 15px 15px 0;
+    margin: 0;
+    margin-left: 50px;
+    // opacity: 0;
+    // z-index: -1;
   }
 }

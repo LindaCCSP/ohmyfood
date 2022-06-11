@@ -1,6 +1,6 @@
 .photo-menu {
   width: 100%;
-  height: 55vh;
+  height: 45vh;
   object-fit: cover;
   position: relative;
   top: -10px;
@@ -8,20 +8,17 @@
 
 .pages-menus {
   background-color: $color-light-grey;
-  border-radius: 20px 20px 0 0;
+  border-radius: 25px 25px 0 0;
   position: relative;
-  top: -100px;
- 
+  top: -45px;
 }
 
+.menus-en-tete {
+  padding: 15px 20px;
+  @include flex-between;
 
-.menus-en-tete{ 
-    padding: 15px 20px;
-    @include flex-between;
-
-    &__title {
-      font-family: $font_logo-title;
-      font-size: 1.6rem;
-    }
-  
+  &__title {
+    font-family: $font_logo-title;
+    font-size: 1.6rem;
+  }
 }

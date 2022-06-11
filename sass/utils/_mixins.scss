@@ -39,7 +39,7 @@
 @mixin button-new {
   position: absolute;
   top: 16px;
-  left: 240px;
+  right: 20px;
   color: rgb(35, 141, 100);
   font-weight: 700;
   background-color: $color-tertiary;
@@ -61,7 +61,7 @@
 @mixin titres-menus {
   text-transform: uppercase;
   font-weight: 300;
-  margin-left: 15px;
+  margin-left: 5px;
   &::after {
     @include souligne-vert;
   }
