@@ -128,12 +128,6 @@ body {
   padding-left: 10px;
 }
 
-@media screen and (min-width: 993px) and (max-width: 1400px) {
-  .fonction-list {
-    display: flex;
-    flex-direction: column;
-  }
-}
 .fonction-list__choice {
   display: flex;
   align-items: center;
@@ -268,15 +262,16 @@ body {
   width: 100%;
   height: 45vh;
   object-fit: cover;
-  position: relative;
-  top: -10px;
+}
+
+.photo-menus {
+  height: 230px;
 }
 
 .pages-menus {
   background-color: #f4f4f4;
   border-radius: 25px 25px 0 0;
   position: relative;
-  top: -45px;
 }
 
 .menus-en-tete {
@@ -399,7 +394,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 25px 0;
+  padding: 25px 0 35px;
 }
 .button-commander__btn--gradient {
   text-decoration: none;

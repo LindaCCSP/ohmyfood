@@ -65,11 +65,11 @@
 }
 
 .fonction-list {
-  @media screen and (min-width: 993px) and (max-width: 1400px) {
-    display: flex;
+  // @media screen and (min-width: 993px) and (max-width: 1400px) {
+  //   display: flex;
 
-    flex-direction: column;
-  }
+  //   flex-direction: column;
+  // }
 
   &__choice {
     display: flex;
