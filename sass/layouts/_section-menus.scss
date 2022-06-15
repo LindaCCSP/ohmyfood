@@ -125,7 +125,7 @@
 
   &__prix {
     position: absolute;
-    right: 45px;
+    right: 20px;
     font-weight: bold;
   }
 
@@ -144,7 +144,18 @@
     //     font-size: 1.25rem;
     // font-weight: 900;
     // width: 4rem;
-    // margin-right: -65px;
+    margin-right: -65px;
     // color: white;
+    &:hover {
+      animation: slideCheck 1s ease 0s 1 normal forwards;
+    }
   }
+
+  // &:before {
+  //   transform: translate(40%, -50%) translateZ(0);
+  // }
+  // &:hover:before {
+  //   transform: translate(-45%, -34%) translateZ(0);
+  //   background-color: red;
+  // }
 }
