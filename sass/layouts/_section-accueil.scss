@@ -1,14 +1,14 @@
-/* section accuiel*/
+/*_____ section accuiel _____*/
 .localisation {
   @include flex-center;
   background-color: #eae6e6;
   width: 100%;
   height: 55px;
 
-  &__form {
+  form {
     margin-left: 95px;
   }
-  &__icon {
+  i {
     font-size: 1.3rem;
     padding-right: 4px;
   }
@@ -41,9 +41,9 @@
   }
 }
 
-/*section Fonctionnement*/
+/*_____ section Fonctionnement _____*/
 
-.fonction__container {
+.fonction-container {
   padding: 40px 0;
   width: 100%;
 
@@ -59,19 +59,26 @@
   @include flex-column;
 
   &__title {
+    @media screen and (min-width: 763px) {
+      @include flex-center;
+      margin-bottom: 20px;
+    }
     margin: 0;
     padding-left: 10px;
   }
 }
 
 .fonction-list {
-  // @media screen and (min-width: 993px) and (max-width: 1400px) {
-  //   display: flex;
-
-  //   flex-direction: column;
-  // }
+  @media screen and (min-width: 763px) {
+    display: flex;
+    justify-content: space-around;
+  }
 
   &__choice {
+    @media screen and (min-width: 763px) {
+      padding: 5px 20px;
+    }
+
     display: flex;
     align-items: center;
     background: $color-light-grey;
@@ -89,7 +96,7 @@
       box-shadow: $shadow-basic;
       background: #f2e7ff;
     }
-    &:hover .fa-mobile-alt {
+    &:hover .icon {
       color: #9356dc;
     }
   }
@@ -103,12 +110,12 @@
     transform: translateX(-50%);
   }
 
-  &__icon {
+  .icon {
     color: #8d8686;
     margin: 0 20px 0 30px;
   }
 
-  &__text {
+  p {
     font-weight: 700;
   }
 }
@@ -117,12 +124,21 @@
 
 .section-restaurants {
   background-color: $color-light-grey;
-  margin-top: 50px;
   padding-bottom: 50px;
-  max-width: 1050px;
-  margin: auto;
+
+  @media #{$medium-up} {
+    border-radius: 20px;
+    max-width: 1250px;
+    margin: auto;
+    margin-bottom: 50px;
+  }
 
   &__titre {
+    @media #{$medium-up} {
+      @include flex-center;
+      padding: 50px 0;
+      font-size: 2.2rem;
+    }
     font-size: 1.6rem;
     font-weight: 800;
     padding: 50px 15px 20px;
@@ -132,10 +148,17 @@
     text-decoration: none;
     color: inherit;
   }
+
   &__containerflex {
+    @media #{$medium-up} {
+      gap: 6rem;
+      margin: 0;
+    }
+
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 1.8rem;
+    gap: 4rem;
     margin: 0 15px;
   }
 
@@ -147,9 +170,10 @@
     background-color: white;
     border-radius: 20px;
     overflow: hidden;
+    box-shadow: 0 8px 16px 0 rgb(1 1 1 / 6%);
   }
 
-  &__card__img {
+  img {
     width: 100%;
     height: 200px;
     border-radius: 20px 20px 0 0;

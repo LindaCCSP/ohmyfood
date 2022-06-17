@@ -1,12 +1,16 @@
 .button-explorez {
   @include flex-center;
   margin-block: 40px;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
 
   &__btn--gradient {
     @include button-gradient;
+
     &:hover {
       transform: scale(1.15);
       box-shadow: 0 8px 16px 2px rgba(1 1 1 / 40%);
+      opacity: 0.7;
     }
   }
 }
@@ -14,12 +18,15 @@
 .button-commander {
   @include flex-center;
   padding: 25px 0 35px;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
 
   &__btn--gradient {
     @include button-gradient;
     &:hover {
       transform: scale(1.15);
       box-shadow: 0 8px 16px 2px rgba(1 1 1 / 40%);
+      opacity: 0.7;
     }
   }
 }

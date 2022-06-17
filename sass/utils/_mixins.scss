@@ -83,3 +83,9 @@
   padding: 10px 10px 0;
   line-height: 30px;
 }
+
+@mixin overflow_items {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
