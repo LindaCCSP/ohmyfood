@@ -3,31 +3,66 @@
 .container-entrees,
 .container-Plats,
 .container-desserts {
-  @media #{$medium-up} {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  /* animation slide check */
+  & > div:nth-child(2) {
+    animation: apparitonMenu 1s both;
   }
+  & > div:nth-child(3) {
+    animation: apparitonMenu 1s 300ms both;
+  }
+  & > div:nth-child(4) {
+    animation: apparitonMenu 1s 600ms both;
+  }
+  & > div:nth-child(5) {
+    animation: apparitonMenu 1s 900ms both;
+  }
+  /* Fin animation slide check */
+
   margin: 10px;
   @include flex-column;
 
   &__titre {
     @include titres-menus;
   }
+
+  @media #{$medium-up} {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .menu-card {
-  @media #{$medium-up} {
-    width: 50%;
-  }
-
+  overflow: hidden;
   display: flex;
   justify-content: space-between;
   @include card-menus;
-  animation: slideMenu 2s; /*@keyframes*/
+  animation: apparitonMenu 2s; /*@keyframes*/
 
-  // .menu-card:hover {
-  //   transform: scale(1.8);
-  // }
+  &:active > .menu-card__check {
+    transform: translateX(-5px);
+  }
+  &:active > .menu-card__price {
+    transform: translateX(-10px);
+    margin-left: 20px;
+  }
+  &:active > .menu-card__check i {
+    animation: check 400ms 200ms both;
+  }
+
+  @media #{$medium-up} {
+    width: 50%;
+    &:hover > .menu-card__check {
+      transform: translateX(-5px);
+    }
+    &:hover > .menu-card__price {
+      transform: translateX(-10px);
+      margin-left: -15px;
+    }
+    &:hover > .menu-card__check i {
+      animation: check 400ms 200ms both;
+    }
+  }
+
   &__description {
     overflow: hidden;
     white-space: nowrap;
@@ -54,17 +89,28 @@
     display: flex;
     align-items: center;
     margin: 0;
+    margin-left: -50px;
     padding-top: 33px;
+    padding-right: 10px;
+    transform: translateX(50px);
+    transition: all 600ms;
   }
   &__check {
     background-color: $color-tertiary;
     border-radius: (0 15px 15px 0);
-    color: white;
     display: flex;
-    align-items: center;
-    transition: 300ms ease-in-out;
     flex-shrink: 0;
-    width: 10px;
+    padding: 0 25px;
     margin-right: -10px;
+    transform: translateX(150px);
+    transition: all 600ms;
+
+    i {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: x-large;
+      color: white;
+    }
   }
 }
