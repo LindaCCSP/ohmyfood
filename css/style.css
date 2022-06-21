@@ -621,6 +621,7 @@ body {
   position: absolute;
   bottom: 15px;
   right: 30px;
+  transform: scale(1);
 }
 
 .heart-menus {
@@ -629,6 +630,7 @@ body {
   position: absolute;
   right: 30px;
   bottom: 40px;
+  transform: scale(1);
 }
 @media only screen and (min-width: 768px) {
   .heart-menus {
@@ -636,14 +638,14 @@ body {
   }
 }
 
-.fa-heart:active {
+.fa-heart:hover {
   background: linear-gradient(175deg, #ff79da, #9356dc);
   font-weight: 900;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  opacity: 1;
-  transition: 0.7s;
+  transition: transform 1s;
+  transform: scale(1.2);
 }
 
 .loader {
