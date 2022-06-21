@@ -404,6 +404,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 @media only screen and (min-width: 768px) {
   .menus-en-tete {
@@ -614,70 +615,35 @@ body {
   opacity: 0.7;
 }
 
-/* coeur page d'accueil */
-.heart {
-  width: 30px;
-  stroke-width: 30;
-  stroke: black;
-  fill: white;
+.heart-accueil {
+  font-size: 30px;
   cursor: pointer;
-}
-
-.coeur-homepage {
-  position: relative;
-}
-
-.heart-full {
   position: absolute;
-  fill: url(#remplissageGradient);
-  stroke: none;
-  right: 10px;
-  bottom: 10px;
+  bottom: 15px;
+  right: 30px;
 }
 
-.heart-empty {
-  width: 30px;
+.heart-menus {
+  font-size: 30px;
+  cursor: pointer;
   position: absolute;
-  right: 10px;
-  bottom: 10px;
+  right: 30px;
+  bottom: 40px;
 }
-.heart-empty:active {
-  opacity: 0;
-  transition: 0.3s;
-}
-
-/* coeurs menus */
-.coeurs-menus {
-  position: relative;
+@media only screen and (min-width: 768px) {
+  .heart-menus {
+    right: 90px;
+  }
 }
 
-.heart-full-menus {
-  position: absolute;
-  fill: url(#remplissageGradient);
-  stroke: none;
-  right: 10px;
-  top: -15px;
-}
-
-.heart-empty-menus {
-  width: 30px;
-  position: absolute;
-  right: 10px;
-  top: -15px;
-}
-.heart-empty-menus:active {
-  opacity: 0;
-  transition: 0.3s;
-}
-
-.fa-heart {
-  background-color: red;
+.fa-heart:active {
+  background: linear-gradient(175deg, #ff79da, #9356dc);
+  font-weight: 900;
   -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -ms-background-clip: text;
-  -o-background-clip: text;
   background-clip: text;
   color: transparent;
+  opacity: 1;
+  transition: 0.7s;
 }
 
 .loader {
