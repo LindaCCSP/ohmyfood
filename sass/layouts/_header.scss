@@ -1,4 +1,4 @@
-.header {
+.header-accueil {
   box-shadow: $shadow-accueil;
 
   h1 {
@@ -17,6 +17,10 @@
     position: absolute;
     left: 20px;
     font-size: 1.6rem;
+
+    @media #{$medium-up} {
+      margin-left: 200px;
+    }
 
     & a {
       color: black;

@@ -4,7 +4,7 @@
     padding: 20px;
   }
 
-  &__titre {
+  h2 {
     @media #{$medium-up} {
       display: flex;
       justify-content: center;

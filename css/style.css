@@ -77,10 +77,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.header {
+.header-accueil {
   box-shadow: 0px 3px 3px 1px #cac9c9;
 }
-.header h1 {
+.header-accueil h1 {
   font-family: "Shrikhand", cursive;
   text-align: center;
   position: relative;
@@ -99,6 +99,11 @@ body {
   position: absolute;
   left: 20px;
   font-size: 1.6rem;
+}
+@media only screen and (min-width: 768px) {
+  .header-menu__retour {
+    margin-left: 200px;
+  }
 }
 .header-menu__retour a {
   color: black;
@@ -170,12 +175,12 @@ body {
   display: flex;
   flex-direction: column;
 }
-.fonction__title {
+.fonction h2 {
   margin: 0;
   padding-left: 10px;
 }
-@media screen and (min-width: 763px) {
-  .fonction__title {
+@media only screen and (min-width: 768px) {
+  .fonction h2 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -183,7 +188,7 @@ body {
   }
 }
 
-@media screen and (min-width: 763px) {
+@media only screen and (min-width: 768px) {
   .fonction-list {
     display: flex;
     justify-content: space-around;
@@ -201,7 +206,7 @@ body {
   position: relative;
   box-shadow: 0 8px 16px 0 rgba(1, 1, 1, 0.13);
 }
-@media screen and (min-width: 763px) {
+@media only screen and (min-width: 768px) {
   .fonction-list__choice {
     padding: 5px 20px;
   }
@@ -327,7 +332,7 @@ body {
     padding: 20px;
   }
 }
-.footer__titre {
+.footer h2 {
   font-family: "Shrikhand", cursive;
   color: #fff;
   font-weight: 200;
@@ -335,7 +340,7 @@ body {
   padding: 20px 20px 0;
 }
 @media only screen and (min-width: 768px) {
-  .footer__titre {
+  .footer h2 {
     display: flex;
     justify-content: center;
     padding: 20px;

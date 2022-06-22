@@ -58,8 +58,8 @@
   padding: 0;
   @include flex-column;
 
-  &__title {
-    @media screen and (min-width: 763px) {
+  h2 {
+    @media #{$medium-up} {
       @include flex-center;
       margin-bottom: 20px;
     }
@@ -69,13 +69,13 @@
 }
 
 .fonction-list {
-  @media screen and (min-width: 763px) {
+  @media #{$medium-up} {
     display: flex;
     justify-content: space-around;
   }
 
   &__choice {
-    @media screen and (min-width: 763px) {
+    @media #{$medium-up} {
       padding: 5px 20px;
     }
 
