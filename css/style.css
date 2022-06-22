@@ -80,7 +80,7 @@ body {
 .header {
   box-shadow: 0px 3px 3px 1px #cac9c9;
 }
-.header__logo {
+.header h1 {
   font-family: "Shrikhand", cursive;
   text-align: center;
   position: relative;
@@ -103,7 +103,7 @@ body {
 .header-menu__retour a {
   color: black;
 }
-.header-menu__logo {
+.header-menu h1 {
   font-family: "Shrikhand", cursive;
   text-align: center;
   position: relative;
@@ -307,14 +307,15 @@ body {
   height: 28px;
   border-radius: 2px;
 }
-.section-restaurants__card__nom-resto {
+.section-restaurants h4 {
   font-weight: 800;
   font-size: 1.2rem;
-  line-height: 37px;
-  margin-left: 8px;
+  margin: 0;
+  padding: 10px 10px 0;
 }
-.section-restaurants__card__nom-plat {
-  margin-left: 8px;
+.section-restaurants p {
+  margin: 0;
+  padding: 5px 10px 0;
   font-size: 1rem;
 }
 
@@ -411,7 +412,7 @@ body {
     justify-content: space-around;
   }
 }
-.menus-en-tete__title {
+.menus-en-tete h2 {
   font-family: "Shrikhand", cursive;
   font-size: 1.6rem;
 }

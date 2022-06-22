@@ -1,7 +1,7 @@
 .header {
   box-shadow: $shadow-accueil;
 
-  &__logo {
+  h1 {
     @include logo;
   }
 }
@@ -22,7 +22,7 @@
       color: black;
     }
   }
-  &__logo {
+  h1 {
     @include logo;
   }
 }
