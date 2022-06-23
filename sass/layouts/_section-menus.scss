@@ -3,6 +3,10 @@
 .container-entrees,
 .container-Plats,
 .container-desserts {
+  @media #{$medium-up} {
+    @include flex-center;
+  }
+
   /* animation slide check */
   & > div:nth-child(2) {
     animation: apparitonMenu 1s both;
@@ -24,12 +28,6 @@
   &__titre {
     @include titres-menus;
   }
-
-  @media #{$medium-up} {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 }
 .menu-card {
   overflow: hidden;
@@ -38,14 +36,14 @@
   @include card-menus;
   animation: apparitonMenu 2s; /*@keyframes*/
 
-  &:active > .menu-card__check {
+  &:hover > .menu-card__check {
     transform: translateX(-5px);
   }
-  &:active > .menu-card__price {
+  &:hover > .menu-card__price {
     transform: translateX(-10px);
     margin-left: 20px;
   }
-  &:active > .menu-card__check i {
+  &:hover > .menu-card__check i {
     animation: check 400ms 200ms both;
   }
 
