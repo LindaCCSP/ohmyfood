@@ -163,6 +163,13 @@
   }
 
   &__card {
+    @media #{$medium-up} {
+      &:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        transform: translate(10px, -10px);
+      }
+    }
+
     max-width: 450px;
     position: relative;
     width: 100%;
@@ -172,10 +179,6 @@
     overflow: hidden;
     box-shadow: 0 8px 16px 0 rgb(1 1 1 / 6%);
     transition: transform 0.15s ease-in-out;
-    &:hover {
-      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-      transform: translate(10px, -10px);
-    }
   }
 
   img {
