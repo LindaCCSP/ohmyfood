@@ -7,59 +7,55 @@
     @include flex-center;
   }
 
-  /* animation slide check */
-  & > div:nth-child(2) {
-    animation: apparitonMenu 1s both;
-  }
-  & > div:nth-child(3) {
-    animation: apparitonMenu 1s 300ms both;
-  }
-  & > div:nth-child(4) {
-    animation: apparitonMenu 1s 600ms both;
-  }
-  & > div:nth-child(5) {
-    animation: apparitonMenu 1s 900ms both;
-  }
-  /* Fin animation slide check */
-
   margin: 10px;
   @include flex-column;
+
+  /*___ Animation apparition card-menus ___*/
+  & > article:nth-child(2) {
+    animation: apparitionMenu 1s both;
+  }
+  & > article:nth-child(3) {
+    animation: apparitionMenu 1s 300ms both;
+  }
+  & > article:nth-child(4) {
+    animation: apparitionMenu 1s 600ms both;
+  }
+  & > article:nth-child(5) {
+    animation: apparitionMenu 1s 900ms both;
+  }
+  /*___ Fin animation apparition card-menus ___*/
 
   &__titre {
     @include titres-menus;
   }
 }
+
 .menu-card {
+  @media #{$medium-up} {
+    width: 50%;
+  }
+
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   display: flex;
   justify-content: space-between;
   @include card-menus;
-  animation: apparitonMenu 2s; /*@keyframes*/
 
-  &:hover > .menu-card__check {
-    transform: translateX(-5px);
-  }
+  /*_____ Animation slide vert _____*/
+
+  /* menu-card__price, enfant direct de menu-card */
   &:hover > .menu-card__price {
     transform: translateX(-10px);
     margin-left: 20px;
   }
+  &:hover > .menu-card__check {
+    transform: translateX(-5px);
+  }
   &:hover > .menu-card__check i {
     animation: check 400ms 200ms both;
   }
-
-  @media #{$medium-up} {
-    width: 50%;
-    &:hover > .menu-card__check {
-      transform: translateX(-5px);
-    }
-    &:hover > .menu-card__price {
-      transform: translateX(-10px);
-      margin-left: -15px;
-    }
-    &:hover > .menu-card__check i {
-      animation: check 400ms 200ms both;
-    }
-  }
+  /*_____________________*/
 
   &__description {
     overflow: hidden;
@@ -87,7 +83,6 @@
     display: flex;
     align-items: center;
     margin: 0;
-    margin-left: -50px;
     padding-top: 33px;
     padding-right: 10px;
     transform: translateX(50px);
@@ -104,9 +99,7 @@
     transition: all 600ms;
 
     i {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flex-center;
       font-size: x-large;
       color: white;
     }

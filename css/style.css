@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 /*________________ Pages Menus ___________________*/
-/*___ Effet apparition card-menus ___*/
-@keyframes apparitonMenu {
+/*___ Animation apparition card-menus ___*/
+@keyframes apparitionMenu {
   from {
     transform: translateY(50%);
     opacity: 0;
@@ -15,14 +15,14 @@
 /*_____ slide check (icon) _____*/
 @keyframes check {
   0% {
-    transform: rotate(0turn);
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(1turn);
+    transform: rotate(360deg);
   }
 }
 /*_____________ Loader _____________*/
-/*___ Evaporation du loader ___*/
+/*___ Disparition du loader ___*/
 @keyframes disappearance {
   0% {
     opacity: 1;
@@ -47,7 +47,7 @@
     visibility: hidden;
   }
 }
-/*___ Effet logo ohmyfood loader ___*/
+/*___ Animation logo ohmyfood loader ___*/
 @keyframes rotate-ohmyfood {
   0% {
     transform: rotate(-360deg);
@@ -58,7 +58,7 @@
     opacity: 1;
   }
 }
-/*___ Loader cercles ___*/
+/*___ Animation Loader cercles ___*/
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -433,11 +433,11 @@ body {
 .container-entrees,
 .container-Plats,
 .container-desserts {
-  /* animation slide check */
-  /* Fin animation slide check */
   margin: 10px;
   display: flex;
   flex-direction: column;
+  /*___ Animation apparition card-menus ___*/
+  /*___ Fin animation apparition card-menus ___*/
 }
 @media only screen and (min-width: 768px) {
   .container-entrees,
@@ -448,25 +448,25 @@ body {
     justify-content: center;
   }
 }
-.container-entrees > div:nth-child(2),
-.container-Plats > div:nth-child(2),
-.container-desserts > div:nth-child(2) {
-  animation: apparitonMenu 1s both;
+.container-entrees > article:nth-child(2),
+.container-Plats > article:nth-child(2),
+.container-desserts > article:nth-child(2) {
+  animation: apparitionMenu 1s both;
 }
-.container-entrees > div:nth-child(3),
-.container-Plats > div:nth-child(3),
-.container-desserts > div:nth-child(3) {
-  animation: apparitonMenu 1s 300ms both;
+.container-entrees > article:nth-child(3),
+.container-Plats > article:nth-child(3),
+.container-desserts > article:nth-child(3) {
+  animation: apparitionMenu 1s 300ms both;
 }
-.container-entrees > div:nth-child(4),
-.container-Plats > div:nth-child(4),
-.container-desserts > div:nth-child(4) {
-  animation: apparitonMenu 1s 600ms both;
+.container-entrees > article:nth-child(4),
+.container-Plats > article:nth-child(4),
+.container-desserts > article:nth-child(4) {
+  animation: apparitionMenu 1s 600ms both;
 }
-.container-entrees > div:nth-child(5),
-.container-Plats > div:nth-child(5),
-.container-desserts > div:nth-child(5) {
-  animation: apparitonMenu 1s 900ms both;
+.container-entrees > article:nth-child(5),
+.container-Plats > article:nth-child(5),
+.container-desserts > article:nth-child(5) {
+  animation: apparitionMenu 1s 900ms both;
 }
 .container-entrees__titre,
 .container-Plats__titre,
@@ -487,6 +487,8 @@ body {
 
 .menu-card {
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   display: flex;
   justify-content: space-between;
   box-shadow: 0 8px 16px 0 rgba(1, 1, 1, 0.2);
@@ -497,32 +499,24 @@ body {
   margin: 0;
   margin-bottom: 1.5rem;
   cursor: pointer;
-  animation: apparitonMenu 2s; /*@keyframes*/
-}
-.menu-card:hover > .menu-card__check {
-  transform: translateX(-5px);
-}
-.menu-card:hover > .menu-card__price {
-  transform: translateX(-10px);
-  margin-left: 20px;
-}
-.menu-card:hover > .menu-card__check i {
-  animation: check 400ms 200ms both;
+  /*_____ Animation slide vert _____*/
+  /* menu-card__price, enfant direct de menu-card */
+  /*_____________________*/
 }
 @media only screen and (min-width: 768px) {
   .menu-card {
     width: 50%;
   }
-  .menu-card:hover > .menu-card__check {
-    transform: translateX(-5px);
-  }
-  .menu-card:hover > .menu-card__price {
-    transform: translateX(-10px);
-    margin-left: -15px;
-  }
-  .menu-card:hover > .menu-card__check i {
-    animation: check 400ms 200ms both;
-  }
+}
+.menu-card:hover > .menu-card__price {
+  transform: translateX(-10px);
+  margin-left: 20px;
+}
+.menu-card:hover > .menu-card__check {
+  transform: translateX(-5px);
+}
+.menu-card:hover > .menu-card__check i {
+  animation: check 400ms 200ms both;
 }
 .menu-card__description {
   overflow: hidden;
@@ -550,7 +544,6 @@ body {
   display: flex;
   align-items: center;
   margin: 0;
-  margin-left: -50px;
   padding-top: 33px;
   padding-right: 10px;
   transform: translateX(50px);
@@ -568,8 +561,8 @@ body {
 }
 .menu-card__check i {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   font-size: x-large;
   color: white;
 }

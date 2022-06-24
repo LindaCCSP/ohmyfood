@@ -1,6 +1,6 @@
-/*___ Effet apparition card-menus ___*/
+/*___ Animation apparition card-menus ___*/
 
-@keyframes apparitonMenu {
+@keyframes apparitionMenu {
   from {
     transform: translateY(50%);
     opacity: 0;
@@ -16,16 +16,16 @@
 
 @keyframes check {
   0% {
-    transform: rotate(0turn);
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(1turn);
+    transform: rotate(360deg);
   }
 }
 
 /*_____________ Loader _____________*/
 
-/*___ Evaporation du loader ___*/
+/*___ Disparition du loader ___*/
 
 @keyframes disappearance {
   0% {
@@ -52,7 +52,7 @@
   }
 }
 
-/*___ Effet logo ohmyfood loader ___*/
+/*___ Animation logo ohmyfood loader ___*/
 
 @keyframes rotate-ohmyfood {
   0% {
@@ -65,7 +65,7 @@
   }
 }
 
-/*___ Loader cercles ___*/
+/*___ Animation Loader cercles ___*/
 
 @keyframes spin {
   0% {
