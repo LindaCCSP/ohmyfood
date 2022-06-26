@@ -84,7 +84,7 @@
   line-height: 30px;
 }
 
-@mixin overflow_items {
+@mixin overflow {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
