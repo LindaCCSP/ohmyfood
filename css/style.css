@@ -669,7 +669,6 @@ body {
   height: 100%;
   position: fixed;
   z-index: 1;
-  animation-fill-mode: forwards;
   animation: disappearance 3s linear both;
   /*___ logo ohmyfood ___*/
   /*___ cercles ___*/
@@ -683,7 +682,7 @@ body {
   font-weight: 900;
   padding: 0 5px;
   font-size: 4rem;
-  animation: rotate-ohmyfood 1s ease 0s 1 normal none;
+  animation: rotate-ohmyfood 1s ease 0s normal none;
 }
 .loader span {
   width: 70px;
