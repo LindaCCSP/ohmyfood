@@ -90,11 +90,10 @@
     position: relative;
     box-shadow: 0 8px 16px 0 rgb(1 1 1 / 13%);
     &:hover {
-      opacity: 0.8;
       cursor: pointer;
       transition: 0.3s;
       box-shadow: $shadow-basic;
-      background: #f2e7ff;
+      background: #f2e7ffb5;
     }
     &:hover .icon {
       color: $color-primary;
@@ -102,11 +101,15 @@
   }
 
   &__number {
-    background-color: #9356dc;
+    @media #{$medium-up} {
+      transform: translateX(-130%);
+    }
+
+    background-color: $color-primary;
     color: white;
     position: absolute;
     padding: 3px 8px 3px 8px;
-    border-radius: 500px;
+    border-radius: 50%;
     transform: translateX(-50%);
   }
 

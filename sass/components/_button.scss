@@ -2,6 +2,7 @@
   @include flex-center;
   margin-block: 40px;
   opacity: 1;
+  transform: scale(1);
   transition: 0.3s ease-in-out;
 
   &__btn--gradient {
@@ -19,6 +20,7 @@
   @include flex-center;
   padding: 25px 0 35px;
   opacity: 1;
+  transform: scale(1);
   transition: 0.3s ease-in-out;
 
   &__btn--gradient {
